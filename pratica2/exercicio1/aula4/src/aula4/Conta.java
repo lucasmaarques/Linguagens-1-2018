@@ -2,22 +2,29 @@ package aula4;
 
 public class Conta {
 
-    int numeroConta;
-    double saldo;
+    private String numeroConta;
+    private double saldo;
     Cliente cliente;
  
-
-    String visualizarSaldo() {
+    public double getSaldo(){
+    return this.saldo;
+}
+    
+    public String getNumeroConta(){
+    return this.numeroConta;
+}
+    
+    public String visualizarSaldo() {
         return Double.toString(this.saldo);
 
     }
 
-    void depositar(double valor) {
+    public void depositar(double valor) {
         this.saldo = this.saldo + valor;
 
     }
 
-    boolean sacar(double valor) {
+    public boolean sacar(double valor) {
         boolean resp = false;
         if (this.saldo >= valor) {
             this.saldo = this.saldo - valor;
@@ -26,7 +33,7 @@ public class Conta {
         return resp;
     }
 
-    boolean transferirSaldo(double valor, Conta destinatario) {
+    public boolean transferirSaldo(double valor, Conta destinatario) {
         boolean resp = false;
         if (this.sacar(valor)) {
             destinatario.depositar(valor);
@@ -37,4 +44,9 @@ public class Conta {
 
     }
 
+    public Conta(String nConta,double saldo,String nome,String endereço,String cpf, int idade){
+        this.saldo = saldo;
+        this.numeroConta = nConta;
+        this.cliente = new Cliente( nome, endereço, cpf, idade);
+    }
 }
