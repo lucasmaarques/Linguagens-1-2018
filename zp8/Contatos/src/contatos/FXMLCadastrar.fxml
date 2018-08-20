@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="173.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="contatos.FXMLCadastrarController">
+    <children>
+        <Button fx:id="button" layoutX="14.0" layoutY="149.0" onAction="#handleButtonAction" text="CADASTRAR" />
+        <Label fx:id="label" layoutX="14.0" layoutY="14.0" minHeight="16" minWidth="69" text="Dados do novo contato:" />
+      <TextField fx:id="txtNome" layoutX="14.0" layoutY="39.0" text="Nome" />
+      <TextField fx:id="txtEmail" layoutX="14.0" layoutY="75.0" text="Email" />
+      <TextField fx:id="txtTelefone" layoutX="14.0" layoutY="110.0" text="Telefone" />
+      <Label fx:id="label1" layoutX="14.0" layoutY="178.0" minHeight="16" minWidth="69" />
+      <Button fx:id="exibir" layoutX="107.0" layoutY="149.0" mnemonicParsing="false" onAction="#ExibirLista" text="Exibir" />
+    </children>
+</AnchorPane>
