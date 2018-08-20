@@ -44,14 +44,13 @@ public class FXMLCadastrarController implements Initializable {
         c1.setEmail(txtEmail.getText());
         c1.setTelefone(txtTelefone.getText());
         listadecontatos.add(c1);
-        System.out.println("Contato:\n" + c1);
         label1.setText("Cadastro realizado!");
     }
     
     @FXML
     private void ExibirLista(ActionEvent event) {
         for (Contato contato : listadecontatos) {
-            System.out.println("" + contato);
+            System.out.println("-------------------------------\n" + contato);
         }
     }
     
